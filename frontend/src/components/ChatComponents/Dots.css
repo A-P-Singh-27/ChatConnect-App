@@ -1,0 +1,18 @@
+.dots {
+    width: 56px;
+    height: 13.4px;
+    background: radial-gradient(circle closest-side at left 6.7px top 50%, #abacbc 90%, #0000),
+                radial-gradient(circle closest-side, #abacbc 90%, #0000),
+                radial-gradient(circle closest-side at right 6.7px top 50%, #abacbc 90%, #0000);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: dots-xm0185md 1s infinite alternate;
+  }
+  
+  @keyframes dots-xm0185md {
+    to {
+      width: 22.4px;
+      height: 26.9px;
+    }
+  }
+  
