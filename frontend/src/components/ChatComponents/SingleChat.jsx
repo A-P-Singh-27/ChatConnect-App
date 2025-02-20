@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import ScrollableChat from './ScrollableChat';
 import { io } from 'socket.io-client';
 
-const ENDPOINT = "http://localhost:4000";
+const ENDPOINT = "https://chat-connect-snowy.vercel.app";
 var socket, selectedChatCompare;
 
 export default function SingleChat({ userData, token, fetchChatAgain, setFetchChatAgain }) {
@@ -28,7 +28,7 @@ export default function SingleChat({ userData, token, fetchChatAgain, setFetchCh
                 return ;
             }
             setLoading(true);
-            const response = await fetch(`http://localhost:4000/api/message/${selectedChat._id}`, {
+            const response = await fetch(`https://chat-connect-snowy.vercel.app/api/message/${selectedChat._id}`, {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -95,7 +95,7 @@ export default function SingleChat({ userData, token, fetchChatAgain, setFetchCh
                 socket.emit("stop typing", selectedChat._id)
                 try {
                     setNewMessage("");
-                    const response = await fetch(`http://localhost:4000/api/message`, {
+                    const response = await fetch(`https://chat-connect-snowy.vercel.app/api/message`, {
                         method: "POST",
                         headers: {
                             'Content-Type': 'application/json',

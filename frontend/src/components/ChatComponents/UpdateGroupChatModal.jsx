@@ -57,7 +57,7 @@ export default function UpdateGroupChatModal({ userData, token, fetchChatAgain, 
         try {
             setLoading(true);
 
-            const response = await fetch(`http://localhost:4000/api/chat/addtogroup`, {
+            const response = await fetch(`https://chat-connect-snowy.vercel.app/api/chat/addtogroup`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -121,7 +121,7 @@ export default function UpdateGroupChatModal({ userData, token, fetchChatAgain, 
         try {
             setLoading(true);
 
-            const response = await fetch(`http://localhost:4000/api/chat/removefromgroup`, {
+            const response = await fetch(`https://chat-connect-snowy.vercel.app/api/chat/removefromgroup`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -176,7 +176,7 @@ export default function UpdateGroupChatModal({ userData, token, fetchChatAgain, 
             try {
                 setLoading(true);
     
-                const response = await fetch(`http://localhost:4000/api/user?search=${search}`, {
+                const response = await fetch(`https://chat-connect-snowy.vercel.app/api/user?search=${search}`, {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -211,7 +211,7 @@ export default function UpdateGroupChatModal({ userData, token, fetchChatAgain, 
 
             setRenameLoading(true);
             
-            const response = await fetch(`http://localhost:4000/api/chat/rename`, {
+            const response = await fetch(`https://chat-connect-snowy.vercel.app/api/chat/rename`, {
                             method: "PUT",
                             headers: {
                                 'Content-Type': 'application/json', 

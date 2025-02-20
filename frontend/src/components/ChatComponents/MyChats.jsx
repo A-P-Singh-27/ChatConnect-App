@@ -19,7 +19,7 @@ export default function MyChats({ userData, token, fetchChatAgain }) {
     
     try {
 
-      const response = await fetch(`http://localhost:4000/api/chat`, {
+      const response = await fetch(`https://chat-connect-snowy.vercel.app/api/chat`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`
