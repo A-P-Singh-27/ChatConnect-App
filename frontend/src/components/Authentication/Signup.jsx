@@ -49,7 +49,7 @@ export default function Signup() {
         }
 
         try {
-            const response = await fetch("http://localhost:4000/api/user", {
+            const response = await fetch("https://chatconnect-app.onrender.com/api/user", {
                 method: "POST",
                 body: formData,
             });

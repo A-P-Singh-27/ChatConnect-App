@@ -33,7 +33,7 @@ export default function GroupChatModal({ children, userData, token }) {
             return;
         }
         try {
-            const response = await fetch(`http://localhost:4000/api/chat/group`, {
+            const response = await fetch(`https://chatconnect-app.onrender.com/api/chat/group`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json', // Specify the content type
@@ -92,7 +92,7 @@ export default function GroupChatModal({ children, userData, token }) {
         try {
             setLoading(true);
 
-            const response = await fetch(`http://localhost:4000/api/user?search=${search}`, {
+            const response = await fetch(`https://chatconnect-app.onrender.com/api/user?search=${search}`, {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`
