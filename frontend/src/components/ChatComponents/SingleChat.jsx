@@ -59,7 +59,8 @@ export default function SingleChat({ userData, token, fetchChatAgain, setFetchCh
     };
 
     useEffect(()=>{
-        socket = io(ENDPOINT);
+        // socket = io(ENDPOINT);
+        socket = io();
         socket.emit("setup" , userData);
         socket.on("connected", ()=> setSocketConnected(true));
         socket.on("typing", ()=>setIsTyping(true));
