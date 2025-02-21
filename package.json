@@ -1,10 +1,11 @@
 {
-  "name": "carmarkettalk",
+  "name": "chatconnect",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node Backend/server.js",
-    "dev": "nodemon Backend/server.js"
+    "dev": "nodemon Backend/server.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "A.P Singh",
   "license": "ISC",

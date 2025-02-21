@@ -81,7 +81,7 @@ export default function SideDrawer({ userData, token }) {
         try {
             setLoading(true);
 
-            const response = await fetch(`https://chat-connect-snowy.vercel.app/api/user?search=${search}`, {
+            const response = await fetch(`http://localhost:4000/api/user?search=${search}`, {
                 method: "GET",
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -118,7 +118,7 @@ export default function SideDrawer({ userData, token }) {
         try {
 
             setLoadingChat(true);
-            const response = await fetch(`https://chat-connect-snowy.vercel.app/api/chat?search=${search}`, {
+            const response = await fetch(`http://localhost:4000/api/chat?search=${search}`, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

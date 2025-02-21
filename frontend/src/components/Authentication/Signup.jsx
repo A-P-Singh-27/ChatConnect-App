@@ -49,7 +49,7 @@ export default function Signup() {
         }
 
         try {
-            const response = await fetch("https://chat-connect-snowy.vercel.app/api/user", {
+            const response = await fetch("http://localhost:4000/api/user", {
                 method: "POST",
                 body: formData,
             });
