@@ -53,7 +53,8 @@ export default function Signup() {
                 method: "POST",
                 body: formData,
             });
-            console.log(response.json());
+            const data = await response.json();
+            console.log(data);
             
 
             if (response.ok) {
