@@ -53,6 +53,8 @@ export default function Signup() {
                 method: "POST",
                 body: formData,
             });
+            console.log(response.json());
+            
 
             if (response.ok) {
                 const data = await response.json();
@@ -67,7 +69,6 @@ export default function Signup() {
         } catch (error) {
             console.error("Error during signup:", error);
             // alert("An error occurred during signup. Please try again later.");
-            toast.error('An error occurred during signup. Please try again later.')
         }
     };
 
